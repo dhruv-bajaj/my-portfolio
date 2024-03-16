@@ -1,18 +1,20 @@
 import { SunIcon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/solid";
+import NavTabs from "./NavTabs";
 interface NavbarProps {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
+  }
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode}) => {
   const changeMode = () => {
     setDarkMode((prevState: boolean) => !prevState);
   };
   return (
-    <div className="flex row justify-between items-center ">
+    <div id="navbar" className="container w-80vw mx-auto pt-4 bg-white dark:bg-dark-mode-bg">
+    <div className="flex row justify-between items-center">
       <div className="flex"></div>
       <div className="flex rounded-l-full rounded-r-full overflow-hidden border border-gray-400 border-l-2 border-r-2 p-2">
-        This will be the navbar
+        <NavTabs />
       </div>
       <div className="flex">
         <div
@@ -26,6 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -16,7 +16,7 @@ export default{
       colors:{
         'dark-mode-bg':"#18181B",
         'light-mode-bg':"#FAFAFA"
-      }
+      },
     },
   },
   plugins:[]
