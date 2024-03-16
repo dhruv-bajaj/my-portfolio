@@ -7,8 +7,10 @@ const navTabsHeadings: string[] = [
   "Education",
   "Skills",
 ];
-
-const NavTabs: React.FC = () => {
+interface NavTabsProps {
+  scrollToSection: (id:string)=>void;
+}
+const NavTabs: React.FC<NavTabsProps> = ({scrollToSection}) => {
   const [selectedTabValue, setSelectedTabValue] = useState<string>("About");
   return (
     <div className="flex row">
@@ -24,11 +26,10 @@ const NavTabs: React.FC = () => {
           key={navTabHeading}
           onClick={() => {
             setSelectedTabValue(navTabHeading);
+            scrollToSection(navTabHeading.toLowerCase());
           }}
         >
-          <a href={`#${navTabHeading.toLowerCase()}`}>
             {navTabHeading}
-          </a>
         </div>
       ))}
     </div>

@@ -1,4 +1,4 @@
-import {useState } from "react";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import About from "./components/About/About";
@@ -9,16 +9,16 @@ import Skills from "./components/Skills/Skills";
 const App = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   return (
-    <div className={`h-screen w-screen ${darkMode ? "dark" : ""}`}>
-      <div
-        className="bg-light-mode-bg dark:bg-black h-full overflow-y-auto"
-      >
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <div className="bg-light-mode-bg dark:bg-black h-full">
+        <div className="container h-full w-80vw mx-auto bg-white dark:bg-dark-mode-bg">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <About />
           <Experience />
           <Projects />
           <Education />
           <Skills />
+        </div>
       </div>
     </div>
   );
