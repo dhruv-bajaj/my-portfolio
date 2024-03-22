@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
     <div
       id="navbar"
       ref={navbarRef}
-      className="container sticky top-0 w-80vw z-50 mx-auto pt-4 bg-white dark:bg-dark-mode-bg"
+      className="container sticky top-0 w-80vw z-50 mx-auto pt-4 pb-2 bg-white dark:bg-dark-mode-bg"
     >
       <div className="flex row justify-between items-center">
         <div className="flex"></div>

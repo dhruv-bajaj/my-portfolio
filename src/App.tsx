@@ -10,8 +10,8 @@ const App = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
-      <div className="bg-light-mode-bg dark:bg-black h-full">
-        <div className="container h-full w-80vw mx-auto bg-white dark:bg-dark-mode-bg">
+      <div className="bg-light-mode-bg dark:bg-black">
+        <div className="container w-80vw mx-auto bg-white dark:bg-dark-mode-bg">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <About />
           <Experience />
