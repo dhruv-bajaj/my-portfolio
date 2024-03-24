@@ -15,7 +15,8 @@ export default{
       },
       colors:{
         'dark-mode-bg':"#18181B",
-        'light-mode-bg':"#FAFAFA"
+        'light-mode-bg':"#FAFAFA",
+        'dark-mode-navbar':"#252529"
       },
     },
   },

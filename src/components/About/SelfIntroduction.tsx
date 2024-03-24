@@ -1,10 +1,10 @@
 const SelfIntroduction = () => {
   return (
-    <div className="h-auto min-h-full bg-gray-300 mb-4 flex flex-wrap items-center">
-      <div className="h-1/3 text-2xl lg:text-5xl font-semibold flex items-center p-4">
+    <div className="h-auto min-h-full mb-4 flex flex-wrap items-center">
+      <div className="h-1/3 text-2xl lg:text-5xl font-semibold flex items-center p-4 dark:text-white">
         I’m Spencer Sharp. I live in New York City, where I design the future.
       </div>
-      <div className=" h-2/3 text-xl flex flex-col items-start p-4 gap-6">
+      <div className=" h-2/3 text-xl flex flex-col items-start p-4 gap-6 dark:text-gray-300">
         <div>
           I’ve loved making things for as long as I can remember, and wrote my
           first program when I was 6 years old, just two weeks after my mom

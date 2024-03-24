@@ -28,11 +28,11 @@ const CodingProfiles = () => {
           <a
             href={ele.url}
             target="_blank"
-            className="flex flex-row 
-          md:justify-start"
+            className="flex flex-row flex-wrap
+          md:justify-start items-center text-xl"
           >
-            <img src={ele.icon} alt={ele.name} className="h-5 mr-2" />
-            {ele.name}
+            <span className="bg-gray-200 rounded-lg" ><img src={ele.icon} alt={ele.name} className="h-6 m-2" /></span>
+            <span className="ml-2 dark:text-gray-300 flex flex-wrap w-2/3">{ele.name}</span>
           </a>
         );
       })}
