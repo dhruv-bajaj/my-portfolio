@@ -13,14 +13,14 @@ interface NavTabsProps {
 const NavTabs: React.FC<NavTabsProps> = ({scrollToSection}) => {
   const [selectedTabValue, setSelectedTabValue] = useState<string>("About");
   return (
-    <div className="flex flex-col divide-y-2 border-2 rounded-lg sm:border-0 sm:flex-row sm:divide-x-0 sm:divide-y-0">
+    <div className="flex flex-col divide-y border border-gray-400 rounded-lg sm:border-0 sm:flex-row sm:divide-x-0 sm:divide-y-0">
       {navTabsHeadings.map((navTabHeading) => (
         <div
           className={`flex justify-center pl-3 pr-3 hover:text-blue-400
-        dark:hover:text-blue-400 cursor-pointer
+        dark:hover:text-blue-400 cursor-pointer text-black dark:text-white
         ${
           selectedTabValue === navTabHeading
-            ? `text-gray-500 dark:text-gray-400`
+            ? `md:text-gray-500 md:dark:text-gray-400`
             : `text-black dark:text-white`
         }`}
           key={navTabHeading}

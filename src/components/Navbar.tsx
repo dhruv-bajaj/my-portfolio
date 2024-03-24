@@ -35,9 +35,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
         <div className="hidden sm:flex rounded-l-full rounded-r-full border border-gray-400 border-l-2 border-r-2 p-2 dark:bg-dark-mode-navbar shadow-md">
           <NavTabs scrollToSection={scrollToSection} />
         </div>
-       <div onClick={()=>{setShowDropDown(prevState=>!prevState)}} className="sm:hidden flex justify-center cursor-pointer w-full m-2 rounded-l-full rounded-r-full overflow-hidden border border-gray-400 border-l-2 border-r-2 p-2">
-        Menu
-        <div className="z-10 absolute bg-white top-[66px] w-3/4">
+       <div onClick={()=>{setShowDropDown(prevState=>!prevState)}} className="sm:hidden flex justify-center cursor-pointer w-1/3 m-2 rounded-l-full rounded-r-full overflow-hidden border border-gray-400 border-l-2 border-r-2 p-2">
+        <div className="text-black dark:text-white">Menu</div>
+        <div className="z-10 absolute bg-white top-[66px] left-0 w-1/3 ml-2 dark:bg-dark-mode-bg">
         {
           showDropDown ?  <NavTabs scrollToSection={scrollToSection} />: <></>
         }
@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
        </div>
         <div className="flex">
           <div
-            className="flex justify-center cursor-pointer mr-4 w-14 rounded-l-full rounded-r-full overflow-hidden border border-gray-400 border-l-2 border-r-2 p-2"
+            className="flex justify-center cursor-pointer mr-4 w-14 rounded-l-full rounded-r-full border border-gray-400 border-l-2 border-r-2 p-2"
             onClick={changeMode}
           >
             {!darkMode ? (
